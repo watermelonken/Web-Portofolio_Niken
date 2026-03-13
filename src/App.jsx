@@ -4,6 +4,7 @@ import CursorStars from "./components/CursorStars"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import About from "./components/About"
+import Activities from "./components/Activities"
 
 import bg2 from "./images/background2.jpg"
 import bg3 from "./images/background3.jpg"
@@ -48,9 +49,7 @@ className="section"
 style={{backgroundImage:`url(${bg3})`}}
 >
 
-<h1>
-{lang==="en"?"My Activities":"Aktivitasku"}
-</h1>
+<Activities lang={lang}/>
 
 </section>
 
