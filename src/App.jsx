@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Activities from "./components/Activities"
+import Work from "./components/Artwork"
+import Footer from "./components/Footer"
 
 import bg2 from "./images/background2.jpg"
 import bg3 from "./images/background3.jpg"
@@ -62,12 +64,10 @@ className="section"
 style={{backgroundImage:`url(${bg4})`}}
 >
 
-<h1>
-{lang==="en"?"My Work":"Karyaku"}
-</h1>
+<Work lang={lang}/>
 
 </section>
-
+<Footer lang={lang}/>
 </div>
 
 )

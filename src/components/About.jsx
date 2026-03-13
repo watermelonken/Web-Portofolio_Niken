@@ -103,7 +103,7 @@ className="about-photo-img"
 
 <div className="about-text">
 
-<h2>{lang==="en"?"About Me":"Tentang Saya"}</h2>
+<h2>Niken Aisyi Meyca</h2>
 
 <p>{text}</p>
 
