@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import CursorStars from "./components/CursorStars"
 import Navbar from "./components/Navbar"
@@ -7,6 +7,7 @@ import About from "./components/About"
 import Activities from "./components/Activities"
 import Work from "./components/Artwork"
 import Footer from "./components/Footer"
+import Loading from "./components/Loading"
 
 import bg2 from "./images/background2.jpg"
 import bg3 from "./images/background3.jpg"
@@ -20,9 +21,27 @@ const toggleLang = ()=>{
 setLang(lang==="en"?"id":"en")
 }
 
+const [loading,setLoading] = useState(true)
+
+useEffect(()=>{
+
+setTimeout(()=>{
+
+setLoading(false)
+
+},2500)
+
+},[])
+
+if(loading){
+return <Loading/>
+}
+
 return(
 
 <div>
+
+{loading && <Loading />}
 
 <CursorStars/>
 
