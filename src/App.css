@@ -259,3 +259,195 @@ transform:translate(-1400px,400px) rotate(-25deg);
 opacity:0;
 }
 }
+
+/* ABOUT GLASS */
+
+.about-glass{
+
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+
+padding:60px;
+
+border-radius:25px;
+
+max-width:1000px;
+
+margin:auto;
+
+}
+
+/* CONTENT */
+
+.about-content{
+
+display:flex;
+gap:40px;
+align-items:center;
+
+}
+
+/* PHOTO */
+
+.about-photo img{
+
+width:220px;
+border-radius:20px;
+
+animation:float 4s ease-in-out infinite;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+/* FLOATING */
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+/* TEXT */
+
+.about-text{
+max-width:500px;
+}
+
+/* SKILLS */
+
+.skills{
+margin-top:30px;
+}
+
+.skill{
+margin-bottom:15px;
+}
+
+.skill-bar{
+
+width:100%;
+height:10px;
+
+background:rgba(255,255,255,0.2);
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.skill-fill{
+
+height:100%;
+
+background:linear-gradient(90deg,#5cc7ff,#005eff);
+
+width:0;
+
+animation:load 2s forwards;
+
+}
+
+/* PERCENTAGES */
+
+.skill1{animation-delay:0.2s; width:90%;}
+.skill2{animation-delay:0.4s; width:80%;}
+.skill3{animation-delay:0.6s; width:70%;}
+.skill4{animation-delay:0.8s; width:65%;}
+.skill5{animation-delay:1s; width:75%;}
+
+/* ANIMATION */
+
+@keyframes load{
+from{width:0;}
+}
+
+.floating-icons span{
+
+position:absolute;
+
+font-size:28px;
+
+opacity:0.5;
+
+animation:floatIcon 8s infinite linear;
+
+}
+
+.floating-icons span:nth-child(1){
+top:20%;
+left:10%;
+animation-duration:9s;
+}
+
+.floating-icons span:nth-child(2){
+top:70%;
+left:20%;
+animation-duration:7s;
+}
+
+.floating-icons span:nth-child(3){
+top:40%;
+right:15%;
+animation-duration:10s;
+}
+
+.floating-icons span:nth-child(4){
+bottom:20%;
+right:20%;
+animation-duration:8s;
+}
+
+.floating-icons span:nth-child(5){
+top:60%;
+left:50%;
+animation-duration:11s;
+}
+
+@keyframes floatIcon{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.about-photo-img{
+
+width:220px;
+
+border-radius:20px;
+
+animation:float 4s ease-in-out infinite;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+transition:0.3s;
+
+cursor:pointer;
+
+}
+
+/* HOVER GLOW */
+
+.about-photo-img:hover{
+
+box-shadow:
+0 0 20px #5cc7ff,
+0 0 40px #5cc7ff,
+0 0 60px #2a75ff;
+
+transform:scale(1.05);
+
+}

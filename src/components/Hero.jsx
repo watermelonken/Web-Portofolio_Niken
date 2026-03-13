@@ -42,6 +42,16 @@ animationDuration: star.duration
 
 <div className="hero-glass">
 
+<div className="floating-icons">
+
+<span>⭐</span>
+<span>🎨</span>
+<span>✨</span>
+<span>🎬</span>
+<span>💻</span>
+
+</div>
+
 <h1>
 {lang === "en" ? "My Introduction! :P" : "Perkenalanku! :P"}
 </h1>

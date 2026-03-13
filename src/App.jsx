@@ -3,6 +3,7 @@ import { useState } from "react"
 import CursorStars from "./components/CursorStars"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import About from "./components/About"
 
 import bg2 from "./images/background2.jpg"
 import bg3 from "./images/background3.jpg"
@@ -20,11 +21,13 @@ return(
 
 <div>
 
-  <CursorStars/>
+<CursorStars/>
 
 <Navbar lang={lang} toggleLang={toggleLang} />
 
 <Hero lang={lang} />
+
+{/* ABOUT SECTION */}
 
 <section
 id="about"
@@ -32,10 +35,12 @@ className="section"
 style={{backgroundImage:`url(${bg2})`}}
 >
 
-<h1>{lang==="en"?"About Me":"Tentang Saya"}</h1>
+<About lang={lang} />
 
 </section>
 
+
+{/* ACTIVITIES */}
 
 <section
 id="activities"
@@ -43,10 +48,14 @@ className="section"
 style={{backgroundImage:`url(${bg3})`}}
 >
 
-<h1>{lang==="en"?"My Activities":"Aktivitasku"}</h1>
+<h1>
+{lang==="en"?"My Activities":"Aktivitasku"}
+</h1>
 
 </section>
 
+
+{/* WORK */}
 
 <section
 id="work"
@@ -54,7 +63,9 @@ className="section"
 style={{backgroundImage:`url(${bg4})`}}
 >
 
-<h1>{lang==="en"?"My Work":"Karyaku"}</h1>
+<h1>
+{lang==="en"?"My Work":"Karyaku"}
+</h1>
 
 </section>
 
