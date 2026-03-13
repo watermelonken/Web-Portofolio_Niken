@@ -1,0 +1,67 @@
+import { useState } from "react"
+
+import CursorStars from "./components/CursorStars"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+
+import bg2 from "./images/background2.jpg"
+import bg3 from "./images/background3.jpg"
+import bg4 from "./images/background4.jpg"
+
+function App(){
+
+const [lang,setLang] = useState("en")
+
+const toggleLang = ()=>{
+setLang(lang==="en"?"id":"en")
+}
+
+return(
+
+<div>
+
+  <CursorStars/>
+
+<Navbar lang={lang} toggleLang={toggleLang} />
+
+<Hero lang={lang} />
+
+<section
+id="about"
+className="section"
+style={{backgroundImage:`url(${bg2})`}}
+>
+
+<h1>{lang==="en"?"About Me":"Tentang Saya"}</h1>
+
+</section>
+
+
+<section
+id="activities"
+className="section"
+style={{backgroundImage:`url(${bg3})`}}
+>
+
+<h1>{lang==="en"?"My Activities":"Aktivitasku"}</h1>
+
+</section>
+
+
+<section
+id="work"
+className="section"
+style={{backgroundImage:`url(${bg4})`}}
+>
+
+<h1>{lang==="en"?"My Work":"Karyaku"}</h1>
+
+</section>
+
+</div>
+
+)
+
+}
+
+export default App

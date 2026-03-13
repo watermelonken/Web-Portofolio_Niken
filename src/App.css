@@ -1,0 +1,261 @@
+html,body{
+  overflow-x:hidden;
+margin:0;
+padding:0;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+color:white;
+}
+
+/* ================= NAVBAR ================= */
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:16px 40px;
+
+box-sizing:border-box;
+
+background:linear-gradient(90deg,#0a2a66,#58a8ff);
+
+z-index:1000;
+}
+
+/* LOGO */
+
+.logo{
+height:40px;
+}
+
+/* MENU TENGAH */
+
+/* MENU */
+
+.nav-center{
+display:flex;
+gap:40px;
+font-weight:700;
+}
+
+.nav-center a{
+color:white;
+text-decoration:none;
+position:relative;
+transition:0.3s;
+}
+
+/* CAHAYA */
+
+.nav-center a:hover{
+text-shadow:0 0 10px white, 0 0 20px #5cc7ff;
+}
+
+/* GARIS BAWAH */
+
+.nav-center a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:white;
+transition:0.3s;
+}
+
+/* HOVER UNDERLINE */
+
+.nav-center a:hover::after{
+width:100%;
+}
+
+/* ACTIVE SECTION */
+
+.nav-center a.active{
+text-shadow:0 0 12px white;
+}
+
+.nav-center a.active::after{
+width:100%;
+}
+
+/* TRANSLATE BUTTON */
+
+.translate-btn{
+background:linear-gradient(45deg,#5cc7ff,#005eff);
+border:none;
+padding:8px 16px;
+border-radius:20px;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.translate-btn:hover{
+transform:scale(1.1);
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+min-height:100vh;
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px;
+position:relative;
+}
+
+/* BLUR OVERLAY */
+
+.section::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+backdrop-filter:blur(6px);
+background:rgba(0,0,0,0.3);
+}
+
+.section *{
+position:relative;
+z-index:2;
+}
+
+/* ================= HERO ================= */
+
+.hero-glass{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+padding:60px;
+border-radius:20px;
+animation:pop 1s ease;
+transition:0.3s;
+}
+
+.hero-glass:hover{
+transform:scale(1.05);
+}
+
+@keyframes pop{
+0%{
+opacity:0;
+transform:scale(0.7);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.hero h1{
+font-size:18px;
+opacity:0.9;
+}
+
+.hero h2{
+font-size:42px;
+margin:10px 0;
+}
+
+.hero h3{
+font-size:22px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+/* ================= BUTTON ================= */
+
+.hero-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+border-radius:25px;
+background:linear-gradient(45deg,#5cc7ff,#005eff);
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:scale(1.1);
+background:linear-gradient(45deg,#8be0ff,#2a75ff);
+}
+
+/* ================= FALLING STARS ================= */
+
+.star-container{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+top:-20px;
+color:white;
+opacity:0.8;
+animation:starFall linear infinite;
+}
+
+@keyframes starFall{
+0%{
+transform:translateY(-10vh);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+/* ================= SHOOTING STAR ================= */
+
+.shooting-star{
+position:absolute;
+top:150px;
+right:-200px;
+width:140px;
+height:2px;
+background:white;
+box-shadow:0 0 10px white;
+transform:rotate(-25deg);
+animation:shoot 5s linear infinite;
+}
+
+@keyframes shoot{
+0%{
+transform:translate(0,0) rotate(-25deg);
+opacity:1;
+}
+100%{
+transform:translate(-1400px,400px) rotate(-25deg);
+opacity:0;
+}
+}
