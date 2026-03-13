@@ -10,7 +10,7 @@ import Footer from "./components/Footer"
 import Loading from "./components/Loading"
 
 import bg2 from "./images/background2.jpg"
-import bg3 from "./images/background3.jpg"
+import bg3 from "./images/Background3.jpg"
 import bg4 from "./images/Background4.jpg"
 
 function App(){
